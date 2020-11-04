@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://cdn.pixabay.com/photo/2020/10/27/11/26/woman-5690392_1280.jpg")
+      center/cover fixed no-repeat;
+}
+/*general */
+.question {
+  color: #623cea;
+  font-weight: bold;
+  font-size: 25px;
+}
+.pick {
+  min-height: 40vh;
+  margin: 10%;
+  background: rgba(252, 248, 3, 0.5);
+  padding: 10px;
+}
+.image img {
+  height: 200px;
+  width: 300px;
+  object-fit: contain;
+  display: inline-block;
+  transition: all 1s ease-in-out;
+  padding: 20px;
+}
+.image img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.pickTeacher {
+  color: #623cea;
+  text-decoration: none;
+  transition: all 0.7s ease-in;
+}
+.pickTeacher:hover {
+  color: #545775;
+  font-weight: bold;
+  padding-left: 20px;
+}
+/***********/
+
+.welcome {
+  width: 75%;
+  margin: 45px auto;
+  padding: 15px;
+  background: rgba(81, 197, 226, 0.7);
+  text-align: center;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+/* math */
+.math__teacher {
+  margin: 25px;
+  width: 40%;
+}
+.math__teacher img {
+  max-width: 120%;
+  max-height: 400px;
+  animation-name: teacherMove;
+  animation-duration: 2s;
+}
+@keyframes teacherMove {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.math__talk {
+  background-color: white;
+  height: 200px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 2px solid black;
+  animation-name: talkMove;
+  animation-delay: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes talkMove {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.math__teacherName {
+  color: blue;
+}
+.math__start {
+  display: inline-block;
+  color: #1b263b;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+.math__start:hover {
+  outline: 10px solid #d3325f;
+  outline-offset: 0.8rem;
+  color: #0d0630;
+}
+.math__study {
+  margin-top: 50px;
+  font-size: 60px;
+  color: #ef709d;
+}
+.math__num {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.math__num1 {
+  background: #a9dbb8;
+  color: #3772ff;
+  margin-right: 10px;
+}
+.math__num2 {
+  background: #ff7e6b;
+  color: #5e8c61;
+  margin: 0 10px;
+}
+.result {
+  color: #d3325f;
+
+  margin-left: 10px;
+}
+.math__resultAni {
+  animation: fromBottom;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes fromBottom {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.math__resultAni:hover {
+  cursor: pointer;
+  padding-bottom: 20px;
+}
